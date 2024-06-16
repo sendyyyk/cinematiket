@@ -1,0 +1,577 @@
+:root {
+    --bg-black-rgb: 0, 0, 0;
+    --bg-white-rgb: 238, 238, 238;
+    --primary-color-rgb: 255, 191, 0;
+    --secondary-color-rgb: 215, 21, 21;
+    --bg-black: #000000;
+    --bg-white: #eeeeee;
+    --primary-color: #ffbf00;
+    --secondary-color: #d71515;
+}
+
+/* Class Color [========= START =========] */
+
+/* black color */
+.bgc-black {
+    background-color: var(--bg-black);
+}
+
+.c-black {
+    color: var(--bg-black);
+}
+
+.fill-black {
+    fill: var(--bg-black);
+}
+
+.strk-black {
+    stroke: var(--bg-black);
+}
+
+/* white color */
+.bgc-white {
+    background-color: var(--bg-white);
+}
+
+.c-white {
+    color: var(--bg-white);
+}
+
+.fill-white {
+    fill: var(--bg-white);
+}
+
+.strk-white {
+    stroke: var(--bg-white);
+}
+
+
+/* primary color */
+.bgc-primary {
+    background-color: var(--primary-color);
+}
+
+.c-primary {
+    color: var(--primary-color);
+}
+
+.fill-primary {
+    fill: var(--primary-color);
+}
+
+.strk-primary {
+    stroke: var(--primary-color);
+}
+
+/* secondary color */
+.bgc-second {
+    background-color: var(--secondary-color);
+}
+
+.c-second {
+    color: var(--secondary-color);
+}
+
+.fill-second {
+    fill: var(--secondary-color);
+}
+
+.strk-second {
+    stroke: var(--secondary-color);
+}
+
+/* Class Color [========= END =========] */
+
+/* Mobile View [========= START =========]*/
+
+.mobile-view .button-default {
+    padding: 5vw 10vw;
+}
+
+.mobile-view .container-default header {
+    height: 17vw;
+    padding: 0 4vw;
+}
+
+.mobile-view header .header-button {
+    width: auto;
+}
+
+.mobile-view .container-default header .logo-wrap a {
+    font-size: 9vw;
+    line-height: 9vw;
+}
+
+.mobile-view header .header-button .login-wrap button,
+.mobile-view header .header-button .cart-wrap button {
+    margin-left: 2vw;
+    padding: 0;
+    width: 12vw;
+    height: 12vw;
+    font-size: 2.3vw;
+    font-weight: 600;
+    line-height: 0;
+    border-radius: 99vw;
+    transition: all 0.3s;
+    background-color: var(--primary-color);
+}
+
+.mobile-view header .header-button .login-wrap button:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.5);
+}
+
+.mobile-view header .cart-wrap button {
+    background-color: var(--bg-black) !important;
+    border: 0.3vw solid var(--primary-color);
+}
+
+.mobile-view header .header-button .cart-wrap button:active {
+    background-color: rgba(var(--bg-black-rgb), 0.5) !important;
+}
+
+.mobile-view header .header-button .cart-wrap button span {
+    bottom: -3vw;
+    left: -3vw;
+    padding: 3vw 2vw;
+    font-size: 2.5vw;
+}
+
+.mobile-view .mobile-view .container-default main .main-hero {
+    flex-direction: column;
+}
+
+.mobile-view .container-default main .main-hero .hero-text,
+.mobile-view .container-default main .main-hero .hero-media {
+    width: 100%;
+}
+
+.mobile-view .container-default main .main-hero .hero-media source {
+    box-shadow: inset 0 -50vw 99vw var(--bg-black);
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-welcome {
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-welcome h2 {
+    font-size: 10vw;
+    line-height: 10vw;
+    text-shadow: 0 0 5vw var(--bg-black);
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-welcome h3 {
+    font-size: 3.8vw;
+    line-height: 10vw;
+    text-shadow: 0 0 5vw var(--bg-black);
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-button button.pesan {
+    margin-right: 2vw;
+    padding: 5vw 10vw;
+    font-size: 3vw;
+    font-weight: 600;
+    transition: all 0.5s;
+    border-radius: 2vw;
+    border: 0.5vw solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-button button.pesan {
+    margin-right: 2vw;
+    padding: 5vw 10vw;
+    font-size: 3vw;
+    font-weight: 600;
+    transition: all 0.5s;
+    border-radius: 2vw;
+    border: 0.5vw solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-button button.pesan:active {
+    border: 0.5vw solid transparent;
+    background-color: var(--primary-color);
+    color: #000000;
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-button button.pesan:hover {
+    border: 0.5vw solid transparent;
+    background-color: var(--primary-color);
+    color: #000000;
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-button button.daftar-film {
+    padding: 5vw 10vw;
+    font-size: 3vw;
+    font-weight: 600;
+    transition: all 0.5s;
+    border: 0;
+    border-radius: 2vw;
+    color: var(--bg-black);
+    background-color: var(--primary-color);
+    border: 0.5vw solid var(--primary-color);
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-button button.daftar-film:active {
+    background-color: rgba(var(--primary-color-rgb), 0.5);
+    border: 0.5vw solid transparent;
+}
+
+.mobile-view .container-default main .main-hero .hero-text .hero-button button.daftar-film:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.5);
+    border: 0.5vw solid transparent;
+}
+
+.mobile-view .container-default main .main-daftar-film {
+    box-shadow: 0vw -10vw 30vmax 20vmax var(--bg-black);
+}
+
+/* Mobile View [========= END =========]*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+.container-default {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-black);
+}
+
+.container-custom {
+    width: 80%;
+}
+
+header {
+    height: 13vh;
+    padding: 0 3vw;
+}
+
+header .logo-wrap a {
+    padding: 0;
+    font-size: 3vw;
+    font-family: "Emilys Candy", serif;
+    line-height: 3vw;
+    color: var(--primary-color);
+}
+
+header .login-wrap button,
+header .cart-wrap button {
+    margin-left: 1vw;
+    padding: 1.5vw 2vw;
+    font-size: 1vw;
+    font-weight: 600;
+    line-height: 0;
+    border-radius: 0.5vw;
+    transition: all 0.3s;
+    background-color: var(--primary-color);
+}
+
+header .cart-wrap button {
+    display: flex;
+    width: 3vw;
+    height: 3vw;
+    padding: 0;
+    transition: all 0.5s;
+    border-radius: 99vw;
+    background-color: transparent;
+    border: 0.1vw solid var(--primary-color);
+}
+
+header .cart-wrap button:hover {
+    background-color: var(--bg-black);
+}
+
+header .cart-wrap button .icon-wrap {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+header .cart-wrap button span {
+    bottom: -0.6vw;
+    left: -0.6vw;
+    padding: 0.7vw;
+    border-radius: 99vw;
+    font-size: 0.7vw;
+    font-weight: 700;
+    line-height: 0;
+    background-color: #d71515;
+    color: var(--primary-color);
+}
+
+.button-default {
+    font-size: 1vw;
+    line-height: 1vw;
+    padding: 1.5vw 2vw;
+}
+
+header .login-wrap button:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.5);
+}
+
+main .main-hero .hero-text {
+    box-shadow: 20vw 0 99vw var(--bg-black);
+}
+
+main .main-hero .hero-text .hero-welcome,
+main .main-hero .hero-text .hero-button {
+    margin-top: 0.5vw;
+    margin-left: 3vw;
+    white-space: nowrap;
+}
+
+main .main-hero .hero-text .hero-welcome h2 {
+    font-size: 4vw;
+    line-height: 4vw;
+    font-weight: 500;
+    text-shadow: 0 0 1vw var(--bg-black);
+    color: var(--bg-white);
+    white-space: nowrap;
+}
+
+main .main-hero .hero-text .hero-welcome h3 {
+    font-size: 2vw;
+    line-height: 5vw;
+    font-weight: 500;
+    text-shadow: 0 0 1vw var(--bg-black);
+    color: var(--bg-white);
+    white-space: nowrap;
+}
+
+main .main-hero .hero-text .hero-button button.pesan {
+    margin-right: 1vw;
+    font-weight: 600;
+    transition: all 0.5s;
+    border-radius: 1vw;
+    border: 0.1vw solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+main .main-hero .hero-text .hero-button button.pesan:hover {
+    border: 0.1vw solid transparent;
+    background-color: var(--primary-color);
+    color: #000000;
+}
+
+main .main-hero .hero-text .hero-button button.daftar-film {
+    padding: 1.5vw 3vw;
+    font-weight: 600;
+    transition: all 0.5s;
+    border: 0;
+    border-radius: 1vw;
+    color: var(--bg-black);
+    border: 0.1vw solid var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+main .main-hero .hero-text .hero-button button.daftar-film:hover {
+    border: 0.1vw solid transparent;
+    background-color: rgba(var(--primary-color-rgb), 0.5);
+}
+
+main .main-hero .hero-media source, main .main-hero .hero-media img {
+    box-shadow: inset 15vw -15vw 99vw var(--bg-black);
+    background-image: url("../image-video/image/hero-media/hero-media.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+main .main-daftar-film {
+    margin: 5vw 0 10vw;
+    box-shadow: 0vw -15vw 99vw var(--bg-black);
+}
+
+main .main-daftar-film .daftar-film-title h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    line-height: 5vw;
+    cursor: default;
+    color: var(--primary-color);
+}
+
+main .main-daftar-film .daftar-film-menu {
+    height: 10%;
+}
+
+main .main-daftar-film .daftar-film-menu .menu {
+    margin: 0 3vw;
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu {
+    width: calc(100% / 4);
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu button {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    color: var(--primary-color);
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu button::after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 0.1vw;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu button:hover::after {
+    display: block;
+}
+
+main .main-daftar-film .daftar-film-show {
+    height: 80%;
+}
+
+main .main-daftar-film .daftar-film-show .display-film {
+    margin: 2vw 0 auto;
+    padding: 0 3vw;
+    height: 85%;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .shift-btn {
+    width: 5vw;
+    height: 5vw;
+    background-color: var(--bg-black);
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: 1vw;
+}
+    
+main .main-daftar-film .daftar-film-show .display-film .shift-btn:hover, 
+main .main-daftar-film .daftar-film-show .display-film .shift-btn:hover svg {
+    background-color: var(--primary-color);
+    fill: var(--bg-black);
+}
+
+main .main-daftar-film .daftar-film-show .display-film .shift-next-btn {
+    right: 0;
+    left: auto;
+    margin-left: 0;
+    margin-right: 1vw;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll::-webkit-scrollbar {
+    display: none;
+    height: 0px;
+    width: 0px;
+    background-color: #3f15d7;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film:first-child {
+    margin-left: 0;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film:last-child {
+    margin-right: 0;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film {
+    margin: 0 0.5vw;
+    transition: all 0.5s;
+    height: 100%;
+    transform: translateX(0);
+    width: calc(100% / 5);
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film {
+    overflow: hidden;
+    height: 85%;
+    border-radius: 1.5vw;
+    background-color: var(--primary-color);
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori {
+    top: 0.6vw;
+    left: 0.6vw;
+    width: 2vw;
+    height: 2vw;
+    background-color: var(--secondary-color);
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film {
+    height: 10%;
+    border-radius: 0.5vw;
+    transition: all 0.5s;
+    background-color: var(--primary-color);
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.5);
+}
+    
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film .svg-film {
+    width: 1.3vw;
+    height: 1.3vw;
+    margin-right: 0.3vw;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film .text-film {
+    font-size: 1.1vw;
+    font-weight: 500;
+    line-height: 1.1vw;
+    color: var(--bg-black);
+}
+
+footer {
+    height: 10vw;
+    background-color: var(--primary-color);
+}
+
+footer .footer-content {
+    margin: auto 3vw;
+}
+    
+footer .footer-content .footer-list {
+    cursor: default;
+    width: calc(100% / 3);
+}
+
+footer .footer-content .footer-left .copyright {
+    font-size: 1.2vw;
+    line-height: 1.2vw;
+    font-weight: 600;
+    margin-bottom: 0.7vw;
+}
+
+footer .footer-content .footer-left .version {
+    font-size: 1vw;
+    line-height: 1vw;
+    font-weight: 500;
+}
+
+footer .footer-content .footer-center .website-name {
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+    font-weight: 600;
+    margin-bottom: 0.5vw;
+    padding-bottom: 0.5vw;
+    border-bottom: 0.1vw solid rgba(var(--bg-black-rgb), 0.3);
+}
+
+footer .footer-content .footer-center .ip-add {
+    font-size: 1vw;
+    line-height: 1vw;
+    color: var(--secondary-color);
+    text-shadow: 0 0 0.05vw var(--bg-black);
+}
+
+footer .footer-content .footer-right .social-media {
+    width: 3vw;
+    height: 3vw;
+    margin-left: 1vw;
+    background-color: var(--bg-black);
+}
+
+footer .footer-content .footer-right .social-media:hover {
+    background-color: var(--secondary-color);
+}
