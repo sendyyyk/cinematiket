@@ -235,7 +235,6 @@
     position: relative;
     border-radius: 0;
     width: 100vw;
-    transition: all 0.5s;
 }
 
 .mobile-view .container-default .login .form-wrap .login-media {
@@ -256,10 +255,6 @@
     width: 100%;
     border: none;
 }
-
-/* .mobile-view .container-default .login .form-wrap .login-form .login-center .login-title {
-    background-color: var(--bg-black);
-} */
 
 .mobile-view .container-default .login .form-wrap .login-form .login-center .login-title h1 {
     font-size: 10vw;
@@ -705,6 +700,7 @@ header .login-wrap button:hover {
     border-radius: 3vw;
     background-color: #000000;
     border: 0.2vw solid var(--primary-color);
+    transition: all 0.5s;
 }
 
 .container-default .login .form-wrap .login-media {
