@@ -88,85 +88,279 @@
     padding: 5vw 10vw;
 }
 
-.mobile-view .container-default header {
-    height: 17vw;
-    padding: 0 4vw;
+.see-all-header {
+    height: 100vh !important;
+}
+
+.mobile-view header {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 16vw;
+    transition: all 0.5s;
+    padding: 0;
+    overflow-y: hidden;
+    align-items: start;
+    backdrop-filter: blur(5vw);
+    background-color: rgba(var(--bg-black-rgb), 0.7);
+    border-bottom: 0.5vw solid rgba(var(--primary-color-rgb), 0.5);
 }
 
 .mobile-view header .header-button {
-    width: auto;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+    margin: 0;
+    margin-top: 100vh;
+    overflow-y: auto;
 }
 
-.mobile-view .container-default header .logo-wrap a {
+.see-all-margin {
+    transition-delay: 0.5s !important;
+    margin-top: 0 !important;
+}
+
+.see-all-transform {
+    transition-delay: 0.5s !important;
+    transform: translateY(0) !important;
+}
+
+.mobile-view header .logo-wrap {
+    display: flex;
+    height: auto;
+    margin: 3vw 4vw 0; 
+    border-bottom: 0.5vw solid var(--primary-color);
+}
+
+.mobile-view header .logo-wrap a {
     font-size: 9vw;
     line-height: 9vw;
+    margin: 0vw 0;
+}
+
+.mobile-view .hamburger-btn {
+    display: flex !important; 
+    width: 12vw;
+    height: 12vw;
+    top: 3vw;
+    right: 4vw;
+    z-index: 30;
+    border-radius: 3vw;
+}
+
+.mobile-view header .header-button  .cart-wrap {
+    order: 2;
+    height: 45vh;
+}
+
+.mobile-view header .header-button .login-wrap {
+    height: 45vh;
 }
 
 .mobile-view header .header-button .login-wrap button,
 .mobile-view header .header-button .cart-wrap button {
-    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     padding: 0;
-    width: 12vw;
-    height: 12vw;
-    font-size: 2.3vw;
+    width: 90%;
+    height: 90%;
+    font-size: 4vmax;
     font-weight: 600;
-    line-height: 0;
-    border-radius: 99vw;
+    line-height: 4vmax;
+    border-radius: 5vw;
     transition: all 0.3s;
+    overflow: hidden;
+    color: var(--secondary-color);
     background-color: var(--primary-color);
+    border: 0.5vw solid var(--secondary-color);
 }
 
-.mobile-view header .header-button .login-wrap button:hover {
-    background-color: rgba(var(--primary-color-rgb), 0.5);
+.mobile-view header .header-button .login-wrap button:active {
+    background-color: rgba(var(--secondary-color-rgb), 0.5);
+}
+
+.mobile-view header .login-wrap button svg {
+    display: block !important;
+    width: 8vmax;
+    height: 8vmax;
 }
 
 .mobile-view header .cart-wrap button {
     background-color: var(--bg-black) !important;
-    border: 0.3vw solid var(--primary-color);
 }
 
 .mobile-view header .header-button .cart-wrap button:active {
-    background-color: rgba(var(--bg-black-rgb), 0.5) !important;
+    background-color: rgba(var(--secondary-color-rgb), 0.5) !important;
 }
 
 .mobile-view header .header-button .cart-wrap button span {
-    bottom: -3vw;
-    left: -3vw;
-    padding: 3vw 2vw;
-    font-size: 2.5vw;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    border-radius: 0;
+    border-top-left-radius: 2vmax;
+    border-bottom-right-radius: 2vmax;
+    padding: 3vmax 3vmax;
+    font-size: 3vmax;
 }
 
-.mobile-view .mobile-view .container-default main .main-hero {
+/* FORM LOGIN / RESTRASI [START] */
+
+.mobile-view .container-default .login {
+    background-color: rgba(var(--bg-black-rgb), 0.5);
+    backdrop-filter: blur(2.3vw);
+}
+
+.mobile-view .container-default .login .close-btn {
+    top: 13%;
+    left: 50%;
+    width: 15vw;
+    height: 15vw;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 1.5vw 0.1vw var(--bg-white);
+}
+
+.mobile-view .container-default .login .close-btn:active {
+    box-shadow: 0 0 3vw 1vw var(--bg-white);
+}
+
+.mobile-view .container-default .login .form-wrap {
+    position: relative;
+    border-radius: 0;
+    width: 100vw;
+    transition: all 0.5s;
+}
+
+.mobile-view .container-default .login .form-wrap .login-media {
+    width: 100%;
+    border: none;
+}
+
+.mobile-view .container-default .login .form-wrap .login-media::after {
+    backdrop-filter: blur(2vw);
+}
+
+.mobile-view .container-default .login .form-wrap .login-media source {
+    box-shadow: inset 0 0 10vw 5vw var(--bg-black);
+}
+
+.mobile-view .container-default .login .form-wrap .login-form {
+    position: absolute;
+    width: 100%;
+    border: none;
+}
+
+/* .mobile-view .container-default .login .form-wrap .login-form .login-center .login-title {
+    background-color: var(--bg-black);
+} */
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-title h1 {
+    font-size: 10vw;
+    line-height: 10vw;
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-title span {
+    font-size: 2.8vw;
+    line-height: 2.8vw;
+    margin-bottom: 4vw;
+    text-shadow: 0 0 1vw var(--bg-black);
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary {
+    border-top: 1vw solid var(--primary-color)!important;
+    border-bottom: 1vw solid var(--primary-color)!important;
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form input {
+    margin-bottom: 3vw;
+    padding: 3vw 3vw;
+    border-radius: 2vw;
+    background-color: transparent;
+    border: 0.5vw solid rgba(var(--bg-white-rgb), 0.5);
+    font-size: 3vw;
+    line-height: 3vw;
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form input:focus {
+    border: 0.5vw solid var(--bg-black);
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form button {
+    padding: 6vw 0;
+    border-radius: 2vw;
+    font-size: 3vw;
+    line-height: 3vw;
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .lupa-pswd {
+    border-right: 0.5vw solid var(--primary-color);
+
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .registrasi {
+    border-left: 0.5vw solid var(--primary-color);
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other {
+    border-radius: 2vw;
+    border: 0.5vw solid var(--primary-color);
+}  
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other span {
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other:active {
+    border: 0.5vw solid var(--primary-color);
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .left-btn {
+    border: 0.5vw solid var(--bg-white);
+}
+
+/* FORM LOGIN / RESTRASI [END] */
+
+/* Main [START] */
+
+.mobile-view .mobile-view main .main-hero {
     flex-direction: column;
 }
 
-.mobile-view .container-default main .main-hero .hero-text,
-.mobile-view .container-default main .main-hero .hero-media {
+.mobile-view main .main-hero .hero-text,
+.mobile-view main .main-hero .hero-media {
     width: 100%;
 }
 
-.mobile-view .container-default main .main-hero .hero-media source {
+.mobile-view main .main-hero .hero-media source {
     box-shadow: inset 0 -50vw 99vw var(--bg-black);
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-welcome {
+.mobile-view main .main-hero .hero-text .hero-welcome {
     margin-left: 4vw;
     margin-right: 4vw;
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-welcome h2 {
+.mobile-view main .main-hero .hero-text .hero-welcome h2 {
     font-size: 10vw;
     line-height: 10vw;
     text-shadow: 0 0 5vw var(--bg-black);
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-welcome h3 {
+.mobile-view main .main-hero .hero-text .hero-welcome h3 {
     font-size: 3.8vw;
     line-height: 10vw;
     text-shadow: 0 0 5vw var(--bg-black);
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-button button.pesan {
+.mobile-view main .main-hero .hero-text .hero-button button.pesan {
     margin-right: 2vw;
     padding: 5vw 10vw;
     font-size: 3vw;
@@ -177,7 +371,7 @@
     color: var(--primary-color);
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-button button.pesan {
+.mobile-view main .main-hero .hero-text .hero-button button.pesan {
     margin-right: 2vw;
     padding: 5vw 10vw;
     font-size: 3vw;
@@ -188,19 +382,19 @@
     color: var(--primary-color);
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-button button.pesan:active {
+.mobile-view main .main-hero .hero-text .hero-button button.pesan:active {
     border: 0.5vw solid transparent;
     background-color: var(--primary-color);
     color: #000000;
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-button button.pesan:hover {
+.mobile-view main .main-hero .hero-text .hero-button button.pesan:hover {
     border: 0.5vw solid transparent;
     background-color: var(--primary-color);
     color: #000000;
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-button button.daftar-film {
+.mobile-view main .main-hero .hero-text .hero-button button.daftar-film {
     padding: 5vw 10vw;
     font-size: 3vw;
     font-weight: 600;
@@ -212,19 +406,187 @@
     border: 0.5vw solid var(--primary-color);
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-button button.daftar-film:active {
+.mobile-view main .main-hero .hero-text .hero-button button.daftar-film:active {
     background-color: rgba(var(--primary-color-rgb), 0.5);
     border: 0.5vw solid transparent;
 }
 
-.mobile-view .container-default main .main-hero .hero-text .hero-button button.daftar-film:hover {
+.mobile-view main .main-hero .hero-text .hero-button button.daftar-film:hover {
     background-color: rgba(var(--primary-color-rgb), 0.5);
     border: 0.5vw solid transparent;
 }
 
-.mobile-view .container-default main .main-daftar-film {
+.mobile-view main .main-daftar-film {
     box-shadow: 0vw -10vw 30vmax 20vmax var(--bg-black);
 }
+
+.mobile-view .main-hero .hero-media source {
+    box-shadow: inset 0 -20vw 10vw 0.1vw var(--bg-black) !important;
+}
+
+.mobile-view .main-daftar-film {
+    box-shadow: none !important;
+    height: auto;
+}
+
+.mobile-view .main-daftar-film .daftar-film-title {
+    height: auto;
+    margin-bottom: 10vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-title h1 {
+    font-size: 11vw;
+    line-height: 11vw;
+    font-weight: 600;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content {
+    height: 80%;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu {
+    height: auto;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu {
+    margin: 0;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu {
+    height: 10vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu a:after {
+    height: 0.5vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu a .list-text {
+    display: none;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu a .icon-menu {
+    width: 5vw;
+    height: 5vw;
+    box-shadow: 0 0 2vw 0.5vw var(--primary-color);
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu:first-child a .icon-menu,
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu:nth-child(2) a .icon-menu {
+    box-shadow: 0 0 2vw 0.5vw var(--secondary-color);
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show {
+    overflow: hidden;
+    height: 90%;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film {
+    margin: 0;
+    padding: 0;
+    height: 100vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll {
+    overflow-x: visible;
+    overflow-y: auto;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap { 
+    width: 100%;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film {
+    position: absolute;
+    width: calc(100% / 2);
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film {
+    margin: auto;
+    border-radius: 2vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori {
+    top: 1.5vw;   
+    left: 1.5vw;
+    width: auto;
+    height: 5vw;   
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori img {
+    margin: auto 0 auto 1.5vw;
+}   
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori .icon-description {
+    font-size: 2vw;
+    line-height: 2vw;
+    margin: auto 2vw auto 1vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .date-picture span {
+    font-size: 3vw;
+    line-height: 3vw;
+    padding: 2vw 4vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film {
+    border-radius: 2vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film .svg-film {
+    width: 3.5vw;
+    height: 3.5vw;
+    margin-right: 1vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film .text-film {
+    font-size: 3vw;
+    line-height: 3vw;
+}
+
+.mobile-view .main-daftar-film .daftar-film-content .daftar-film-show .display-film .shift-btn {
+    display: none;
+}
+
+/* Main [END] */
+
+/* Footer [START] */
+
+.mobile-view footer {
+    height: 20vw;
+}
+
+.mobile-view footer .footer-content {
+    margin: 0 4vw;
+    height: 100%;
+}
+
+.mobile-view footer .footer-content .footer-left .copyright {
+    font-size: 2vw;
+    line-height: 2vw;
+    margin-bottom: 1vw;
+}
+
+.mobile-view footer .footer-content .footer-left .version {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+}
+
+.mobile-view footer .footer-content .footer-center .website-name {
+    font-size: 3vw;
+    line-height: 3vw;
+}
+
+.mobile-view footer .footer-content .footer-center .ip-add {
+    font-size: 2vw;
+    line-height: 2vw;
+}
+
+.mobile-view footer .footer-content .footer-right .social-media {
+    width: 5vw;
+    height: 5vw;
+}
+
+/* Footer [END]*/
 
 /* Mobile View [========= END =========]*/
 
@@ -312,6 +674,211 @@ header .cart-wrap button span {
 header .login-wrap button:hover {
     background-color: rgba(var(--primary-color-rgb), 0.5);
 }
+
+/* Form Login [START] */
+
+.container-default .login {
+    background-color: rgba(var(--bg-black-rgb), 0.5);
+    backdrop-filter: blur(0.5vw);
+    transition: all 0.5s;
+    height: 0;
+}
+
+.container-default .login .close-btn {
+    top: 15%;
+    left: 80%;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 99vw;
+    background-color: rgba(var(--bg-black-rgb), 0.5);
+    box-shadow: 0 0 0.3vw 0.1vw var(--bg-white);
+    transition: all 0.5s;
+}
+
+.container-default .login .close-btn:hover {
+    box-shadow: 0 0 1vw 0.5vw var(--bg-white);
+}
+
+.container-default .login .form-wrap {
+    height: 60vh;
+    width: 60vw;
+    border-radius: 3vw;
+    background-color: #000000;
+    border: 0.2vw solid var(--primary-color);
+}
+
+.container-default .login .form-wrap .login-media {
+    position: relative;
+    width: 50%;
+    border-right: 0.1vw solid var(--primary-color);
+}
+
+.container-default .login .form-wrap .login-media::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.1vw);
+}
+
+.container-default .login .form-wrap .login-media source {
+    box-shadow: inset 0 0 50vw 1vw var(--bg-black);
+    background-image: url("../image-video/image/hero-media/hero-media.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-default .login .form-wrap .login-form {
+    width: 50%;
+    border-left: 0.1vw solid var(--primary-color);
+}
+
+.container-default .login .form-wrap .login-form .login-center {
+    width: 85%;
+    height: 85%;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-title {
+    height: 20%;
+    width: 100%;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-title h1 {
+    width: 100%;
+    font-size: 3vw;
+    line-height: 3vw;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+} 
+
+.container-default .login .form-wrap .login-form .login-center .login-title span {
+    font-size: 0.9vw;
+    font-weight: 500;
+    line-height: 0.9vw;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--bg-white);
+    margin-bottom: 1vw;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-primary {
+    height: 65%;
+    width: 100%;
+    border-top: 0.2vw solid var(--primary-color);
+    border-bottom: 0.2vw solid var(--primary-color);
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-primary form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-primary form input {
+    margin-bottom: 1vw;
+    padding: 0.7vw 1vw;
+    border-radius: 0.5vw;
+    background-color: transparent;
+    border: 0.1vw solid rgba(var(--bg-white-rgb), 0.5);
+    font-size: 1vw;
+    line-height: 1vw;
+    font-weight: 500;
+    transition: all 0.1s;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-primary form input::placeholder {
+    color: var(--bg-white);
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-primary form input:focus {
+    outline: none;
+    color: var(--bg-black);
+    background-color: rgba(var(--primary-color-rgb), 0.7);
+    border: 0.1vw solid var(--bg-white);
+    transition: all 0.1s;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-primary form input:focus::placeholder {
+    color: var(--bg-black);
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-primary form button {
+    width: 100%;
+    padding: 1.5vw 0;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 1vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    line-height: 1.2vw;
+    transition: all 0.3s;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-primary form button:hover:active {
+    background-color: rgba(var(--primary-color-rgb), 0.5);
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn {
+    height: 15%;
+    width: 100%;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap {
+    width: 50%;
+    height: 100%;
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .lupa-pswd {
+    border-right: 0.1vw solid var(--primary-color);
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .registrasi {
+    border-left: 0.1vw solid var(--primary-color);
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    border-radius: 1vw;
+    color: var(--primary-color);
+    transition: all 0.3s;
+    border: 0.1vw solid var(--primary-color);
+}  
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other span {
+    font-size: 0.8vw;
+    font-weight: 500;
+    line-height: 0.8vw;
+    margin: auto;
+}
+
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other:hover {
+    background-color: var(--primary-color);
+    border: 0.1vw solid var(--primary-color);
+    color: var(--bg-black);
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .left-btn {
+    color: var(--bg-white);
+    background-color: transparent;
+    border: 0.1vw solid var(--bg-white);
+}
+
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .left-btn:hover {
+    border: 0.1vw solid var(--primary-color);
+    background-color: var(--bg-black);
+    color: var(--primary-color);
+}
+
+/* Form Login [END] */
 
 main .main-hero .hero-text {
     box-shadow: 20vw 0 99vw var(--bg-black);
@@ -407,13 +974,7 @@ main .main-daftar-film .daftar-film-menu .menu .list-menu {
     width: calc(100% / 4);
 }
 
-main .main-daftar-film .daftar-film-menu .menu .list-menu button {
-    font-size: 1.5vw;
-    line-height: 1.5vw;
-    color: var(--primary-color);
-}
-
-main .main-daftar-film .daftar-film-menu .menu .list-menu button::after {
+main .main-daftar-film .daftar-film-menu .menu .list-menu a::after {
     content: "";
     display: none;
     position: absolute;
@@ -423,8 +984,81 @@ main .main-daftar-film .daftar-film-menu .menu .list-menu button::after {
     background-color: var(--primary-color);
 }
 
-main .main-daftar-film .daftar-film-menu .menu .list-menu button:hover::after {
+main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(2) a::after {
+    background-color: var(--secondary-color);
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu:first-child a::after {
     display: block;
+}
+
+.sedang-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu:first-child a::after,
+.sedang-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(3) a::after,
+.sedang-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(4) a::after {
+    display: none;
+}
+
+.sedang-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(2) a::after {
+    display: block;
+}
+
+.segera-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu:first-child a::after,
+.segera-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(2) a::after,
+.segera-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(4) a::after {
+    display: none;
+}
+
+.segera-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(3) a::after {
+    display: block;
+}
+
+.kategori main .main-daftar-film .daftar-film-menu .menu .list-menu:first-child a::after,
+.kategori main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(2) a::after,
+.kategori main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(3) a::after {
+    display: none;
+}
+
+.kategori main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(4) a::after {
+    display: block;
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu:first-child a::after {
+    display: block;
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu a:hover::after,
+.sedang-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu a:hover::after,
+.segera-tayang main .main-daftar-film .daftar-film-menu .menu .list-menu a:hover::after,
+.kategori main .main-daftar-film .daftar-film-menu .menu .list-menu a:hover::after {
+    display: block;
+}
+
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu a .icon-menu {
+    width: 2.3vw;
+    height: 2.3vw;
+    margin-right: 0.7vw;
+    box-shadow: 0 0 1vw var(--primary-color);
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu:first-child a .icon-menu {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 1vw var(--secondary-color);
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(2) a .icon-menu {
+    box-shadow: 0 0 1vw var(--secondary-color);
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu a span {
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+main .main-daftar-film .daftar-film-menu .menu .list-menu:nth-child(2) a span {
+    color: var(--secondary-color);
 }
 
 main .main-daftar-film .daftar-film-show {
@@ -464,33 +1098,31 @@ main .main-daftar-film .daftar-film-show .display-film .display-scroll::-webkit-
     display: none;
     height: 0px;
     width: 0px;
-    background-color: #3f15d7;
 }
 
-main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film:first-child {
-    margin-left: 0;
-}
-
-main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film:last-child {
-    margin-right: 0;
-}
 
 main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film {
-    margin: 0 0.5vw;
     transition: all 0.5s;
     height: 100%;
     transform: translateX(0);
     width: calc(100% / 5);
+    line-height: 0;
 }
 
 main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film {
     overflow: hidden;
     height: 85%;
+    width: 95%;
+    margin: 0 auto;
     border-radius: 1.5vw;
-    background-color: var(--primary-color);
 }
 
-main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori {
+.segera-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film {
+    cursor: default;
+    pointer-events: none;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori{
     top: 0.6vw;
     left: 0.6vw;
     width: 2vw;
@@ -498,11 +1130,79 @@ main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wra
     background-color: var(--secondary-color);
 }
 
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori:hover {
+    width: auto;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori img {
+    margin: auto 0 auto 0.4vw;
+}
+
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori .icon-description {
+    margin: auto 1vw auto 0.5vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    line-height: 0.7vw;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+.sedang-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori {
+    border: 0.1vw solid var(--secondary-color);
+    background-color: var(--bg-black);
+}
+
+.sedang-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-description {
+    color: var(--secondary-color);
+}
+
+.segera-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori {
+    background-color: var(--primary-color);
+    width: auto;
+}
+
+main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori .icon-description {
+    margin: auto 1vw auto 0.3vw;
+}
+
+.segera-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-kategori img {
+    width: 100%;
+    height: 100%;
+    margin: auto 0 auto 0;
+}
+
+.segera-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .icon-description {
+    color: var(--bg-black);
+}
+
+.segera-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .date-picture {
+    background-color: rgba(var(--bg-black-rgb), 0.7);
+}
+
+.segera-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .picture-film .date-picture span {
+    font-size: 1vw;
+    font-weight: 600;
+    line-height: 1vw;
+    background-color: var(--bg-black);
+    padding: 0.7vw 1.5vw;
+    color: var(--primary-color);
+    border: 0.1vw solid var(--primary-color);
+}
+
 main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film {
     height: 10%;
+    width: 95%;
+    margin: 0 auto;
     border-radius: 0.5vw;
     transition: all 0.5s;
     background-color: var(--primary-color);
+}
+
+.segera-tayang main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film {
+    /* cursor: default; */
+    background-color: rgba(var(--primary-color-rgb), 0.5);
 }
 
 main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film:hover {
@@ -516,9 +1216,9 @@ main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wra
 }
 
 main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wrap .list-film .btn-film .text-film {
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-weight: 500;
-    line-height: 1.1vw;
+    line-height: 1vw;
     color: var(--bg-black);
 }
 

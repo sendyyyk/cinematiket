@@ -1,8 +1,10 @@
 module.exports = {
-    mode: 'jit',
-    content: ["./public/**/*.{html,js}"],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
+    purge: {
+      mode: 'jit',
+      content: ["./public/**/*.{html,js}"],
+      theme: {
+        extend: {},
+      },
+      plugins: [],
+    }
 }
