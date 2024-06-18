@@ -235,6 +235,7 @@
     position: relative;
     border-radius: 0;
     width: 100vw;
+    height: 60vmax;
 }
 
 .mobile-view .container-default .login .form-wrap .login-media {
