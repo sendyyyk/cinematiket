@@ -129,6 +129,10 @@
     transform: translateY(0) !important;
 }
 
+.see-all-transform-100 {
+    transform: translateY(100vh) !important;
+}
+
 .mobile-view header .logo-wrap {
     display: flex;
     height: auto;
@@ -152,7 +156,7 @@
     border-radius: 3vw;
 }
 
-.mobile-view header .header-button  .cart-wrap {
+.mobile-view header .header-button .cart-wrap {
     order: 2;
     height: 45vh;
 }
@@ -214,17 +218,26 @@
 /* FORM LOGIN / RESTRASI [START] */
 
 .mobile-view .container-default .login {
+    flex-direction: column;
     background-color: rgba(var(--bg-black-rgb), 0.5);
     backdrop-filter: blur(2.3vw);
 }
 
 .mobile-view .container-default .login .close-btn {
-    top: 13%;
-    left: 50%;
-    width: 15vw;
-    height: 15vw;
-    transform: translate(-50%, -50%);
+    top: 5vw;
+    right: 5vw;
+    left: auto;
+    width: 10vw;
+    height: 10vw;
     box-shadow: 0 0 1.5vw 0.1vw var(--bg-white);
+}
+
+.mobile-view .container-default .registrasi .close-btn,
+.mobile-view .container-default .lupa-pswd .close-btn {
+    top: 5vw;
+    right: 5vw;
+    left: auto;
+    transform: none;
 }
 
 .mobile-view .container-default .login .close-btn:active {
@@ -233,9 +246,14 @@
 
 .mobile-view .container-default .login .form-wrap {
     position: relative;
+    margin: auto 0 auto;
     border-radius: 0;
     width: 100vw;
-    height: 60vmax;
+    height: 100vw;
+}
+
+.mobile-view .container-default .login .registrasi-wrap {
+    height: 100vh;
 }
 
 .mobile-view .container-default .login .form-wrap .login-media {
@@ -257,24 +275,32 @@
     border: none;
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-title h1 {
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-title h1,
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-title h1,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-title h1 {
     font-size: 10vw;
     line-height: 10vw;
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-title span {
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-title span,
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-title span,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-title span {
     font-size: 2.8vw;
     line-height: 2.8vw;
     margin-bottom: 4vw;
     text-shadow: 0 0 1vw var(--bg-black);
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary {
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary,
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary{
     border-top: 1vw solid var(--primary-color)!important;
     border-bottom: 1vw solid var(--primary-color)!important;
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form input {
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form input,
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary form input,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary form input {
     margin-bottom: 3vw;
     padding: 3vw 3vw;
     border-radius: 2vw;
@@ -284,37 +310,56 @@
     line-height: 3vw;
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form input:focus {
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form input:focus,
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary form input:focus,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary form input:focus {
     border: 0.5vw solid var(--bg-black);
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form button {
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-primary form button,
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary form button,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary form button {
     padding: 6vw 0;
     border-radius: 2vw;
     font-size: 3vw;
     line-height: 3vw;
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .lupa-pswd {
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .lupa-pswd-btn,
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .text-other,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .registrasi-btn {
     border-right: 0.5vw solid var(--primary-color);
-
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .registrasi {
-    border-left: 0.5vw solid var(--primary-color);
-}
-
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other {
-    border-radius: 2vw;
-    border: 0.5vw solid var(--primary-color);
-}  
-
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other span {
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .text-other span {
     font-size: 2.5vw;
     line-height: 2.5vw;
 }
 
-.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other:active {
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .registrasi-btn,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .login-btn,
+.mobile-view .container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .login-btn {
+    border-left: 0.5vw solid var(--primary-color);
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other,
+.mobile-view .container-default .registrasi .form-wrap .registrasi-form .registrasi-center .registrasi-other-btn .btn-wrap .btn-other,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .btn-wrap .btn-other {
+    border-radius: 2vw;
+    border: 0.5vw solid var(--primary-color);
+    margin: auto;
+}  
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other span,
+.mobile-view .container-default .registrasi .form-wrap .registrasi-form .registrasi-center .registrasi-other-btn .btn-wrap .btn-other span,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .btn-wrap .btn-other span {
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+}
+
+.mobile-view .container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other:active,
+.mobile-view .container-default .registrasi .form-wrap .registrasi-form .registrasi-center .registrasi-other-btn .btn-wrap .btn-other:active,
+.mobile-view .container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .btn-wrap .btn-other:active {
     border: 0.5vw solid var(--primary-color);
 }
 
@@ -657,7 +702,7 @@ header .cart-wrap button span {
     font-size: 0.7vw;
     font-weight: 700;
     line-height: 0;
-    background-color: #d71515;
+    background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
@@ -733,17 +778,28 @@ header .login-wrap button:hover {
     border-left: 0.1vw solid var(--primary-color);
 }
 
-.container-default .login .form-wrap .login-form .login-center {
+.container-default .login .form-wrap .registrasi-form,
+.container-default .login .form-wrap .lupa-pswd-form {
+    display: none;
+}
+
+.container-default .login .form-wrap .login-form .login-center,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center {
     width: 85%;
     height: 85%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .container-default .login .form-wrap .login-form .login-center .login-title {
-    height: 20%;
+    height: 22%;
     width: 100%;
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-title h1 {
+.container-default .login .form-wrap .login-form .login-center .login-title h1,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-title h1,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-title h1 {
     width: 100%;
     font-size: 3vw;
     line-height: 3vw;
@@ -752,7 +808,9 @@ header .login-wrap button:hover {
     color: var(--primary-color);
 } 
 
-.container-default .login .form-wrap .login-form .login-center .login-title span {
+.container-default .login .form-wrap .login-form .login-center .login-title span,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-title span,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-title span {
     font-size: 0.9vw;
     font-weight: 500;
     line-height: 0.9vw;
@@ -762,37 +820,48 @@ header .login-wrap button:hover {
     margin-bottom: 1vw;
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-primary {
-    height: 65%;
+.container-default .login .form-wrap .login-form .login-center .login-primary,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary {
+    height: 63%;
     width: 100%;
     border-top: 0.2vw solid var(--primary-color);
     border-bottom: 0.2vw solid var(--primary-color);
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-primary form {
+.container-default .login .form-wrap .login-form .login-center .login-primary form,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary form,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary form {
     display: flex;
     flex-direction: column;
     margin: auto;
     width: 90%;
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-primary form input {
+.container-default .login .form-wrap .login-form .login-center .login-primary form input,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary form input,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary form input {
     margin-bottom: 1vw;
     padding: 0.7vw 1vw;
     border-radius: 0.5vw;
-    background-color: transparent;
     border: 0.1vw solid rgba(var(--bg-white-rgb), 0.5);
     font-size: 1vw;
     line-height: 1vw;
     font-weight: 500;
     transition: all 0.1s;
+    color: var(--bg-white);
+    background-color: transparent;
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-primary form input::placeholder {
+.container-default .login .form-wrap .login-form .login-center .login-primary form input::placeholder,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary form input::placeholder,
+.container-default .registrasi .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary form input::placeholder {
     color: var(--bg-white);
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-primary form input:focus {
+.container-default .login .form-wrap .login-form .login-center .login-primary form input:focus,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary form input:focus,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary form input:focus {
     outline: none;
     color: var(--bg-black);
     background-color: rgba(var(--primary-color-rgb), 0.7);
@@ -800,11 +869,15 @@ header .login-wrap button:hover {
     transition: all 0.1s;
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-primary form input:focus::placeholder {
+.container-default .login .form-wrap .login-form .login-center .login-primary form input:focus::placeholder,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary form input:focus::placeholder,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary form input:focus::placeholder {
     color: var(--bg-black);
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-primary form button {
+.container-default .login .form-wrap .login-form .login-center .login-primary form button,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary button,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary button {
     width: 100%;
     padding: 1.5vw 0;
     text-align: center;
@@ -816,29 +889,41 @@ header .login-wrap button:hover {
     transition: all 0.3s;
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-primary form button:hover:active {
+.container-default .login .form-wrap .login-form .login-center .login-primary form button:hover,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary button:hover,  
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary button:hover {    
     background-color: rgba(var(--primary-color-rgb), 0.5);
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-other-btn {
+.container-default .login .form-wrap .login-form .login-center .login-other-btn,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn, 
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn {    
     height: 15%;
     width: 100%;
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap {
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .btn-wrap,    
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .btn-wrap {    
     width: 50%;
     height: 100%;
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-other-btn .lupa-pswd {
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .lupa-pswd-btn,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .text-other,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .registrasi-btn {
     border-right: 0.1vw solid var(--primary-color);
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-other-btn .registrasi {
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .registrasi-btn,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .login-btn,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .login-btn {
     border-left: 0.1vw solid var(--primary-color);
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other {
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .btn-wrap .btn-other,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .btn-wrap .btn-other {
     display: flex;
     width: 80%;
     height: 70%;
@@ -849,7 +934,9 @@ header .login-wrap button:hover {
     border: 0.1vw solid var(--primary-color);
 }  
 
-.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other span {
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other span,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .btn-wrap .btn-other span,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .btn-wrap .btn-other span {
     font-size: 0.8vw;
     font-weight: 500;
     line-height: 0.8vw;
@@ -857,13 +944,15 @@ header .login-wrap button:hover {
 }
 
 
-.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other:hover {
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .btn-other:hover,
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .btn-wrap .btn-other:hover,
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn .btn-wrap .btn-other:hover{
     background-color: var(--primary-color);
     border: 0.1vw solid var(--primary-color);
     color: var(--bg-black);
 }
 
-.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .left-btn {
+.container-default .login .form-wrap .login-form .login-center .login-other-btn .btn-wrap .left-btn {    
     color: var(--bg-white);
     background-color: transparent;
     border: 0.1vw solid var(--bg-white);
@@ -876,6 +965,98 @@ header .login-wrap button:hover {
 }
 
 /* Form Login [END] */
+
+/* Form Register [START] */
+
+.container-default .registrasi .close-btn {
+    top: 5%;
+    left: 70%;
+}
+
+.container-default .registrasi .registrasi-wrap {
+    height: 45vw;
+    width: 40vw;
+}
+
+.container-default .registrasi .registrasi-wrap .login-media,
+.container-default .registrasi .registrasi-wrap .login-form {
+    display: none;
+}
+
+.container-default .registrasi .registrasi-wrap .registrasi-form {
+    display: flex;
+    width: 100%;
+}
+
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center {
+    width: 85%;
+    height: 90%;
+}
+
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-title {
+    height: 16%;
+}
+
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-primary {
+    height: 75%;
+}
+
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn {
+    height: 9%;
+}
+
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .btn-wrap .btn-other {
+    height: 80%;
+    margin: auto auto 0;
+}
+
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .text-other span {
+    color: var(--bg-white);
+    margin: auto;
+    font-weight: 500;
+}
+
+.container-default .registrasi .registrasi-wrap .registrasi-form .registrasi-center .registrasi-other-btn .text-other {
+    border-right: 0.1vw solid var(--primary-color);
+}
+
+/* Form Register [END] */
+
+/* Form Lupa Password [Start] */
+
+.container-default .lupa-pswd .close-btn {
+    top: 15%;
+    left: 70%;
+}
+
+.container-default .lupa-pswd .lupa-pswd-wrap {
+    height: 30vw;
+    width: 40vw;
+}
+
+.container-default .lupa-pswd .lupa-pswd-wrap .login-media,
+.container-default .lupa-pswd .lupa-pswd-wrap .login-form {
+    display: none;
+}
+
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form {
+    display: flex;
+    width: 100%;
+}
+
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-title {
+    height: 24%;
+}
+
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-primary {
+    height: 56%;
+}
+
+.container-default .lupa-pswd .lupa-pswd-wrap .lupa-pswd-form .lupa-pswd-center .lupa-pswd-other-btn {
+    height: 20%;
+}
+
+/* Form Lupa Password [END] */
 
 main .main-hero .hero-text {
     box-shadow: 20vw 0 99vw var(--bg-black);
