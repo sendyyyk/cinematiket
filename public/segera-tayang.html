@@ -12,30 +12,78 @@
 </head>
 <body>
     <div class="container-default segera-tayang relative overflow-x-hidden overflow-y-auto">
-        <header class="absolute top-0 z-20 flex justify-between items-center w-full">
-            <div class="logo-wrap flex h-full">
-                <a href="#" class="my-auto">CinemaTiket.</a>
-            </div>
-            <div class="header-button flex">
-                <div class="cart-wrap">
-                    <button type="button" class="button-default relative h-1/5 my-auto">
-                        <div class="icon-wrap">
-                            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.7351 14.0181C8.91085 13.6985 9.24662 13.5 9.61132 13.5H16.47C17.22 13.5 17.88 13.09 18.22 12.47L21.6008 6.33041C21.7106 6.13097 21.7448 5.91025 21.7129 5.70131C21.8904 5.52082 22 5.27321 22 5C22 4.44772 21.5523 4 21 4H6C5.96703 4 5.93443 4.0016 5.90228 4.00471L5.7317 3.64435C5.40095 2.94557 4.69708 2.5 3.92398 2.5H2.92004C2.36776 2.5 1.92004 2.94772 1.92004 3.5C1.92004 4.05228 2.36776 4.5 2.92004 4.5H3.14518C3.6184 4.5 4.04931 4.77254 4.25211 5.20011L7.08022 11.1627C7.35632 11.7448 7.33509 12.4243 7.02318 12.988L6.17004 14.53C5.44004 15.87 6.40004 17.5 7.92004 17.5H18.92C19.4723 17.5 19.92 17.0523 19.92 16.5C19.92 15.9477 19.4723 15.5 18.92 15.5H9.61131C8.85071 15.5 8.36855 14.6845 8.7351 14.0181Z" fill="#ffbf00"></path> <path d="M7.92005 18.5C6.82005 18.5 5.93005 19.4 5.93005 20.5C5.93005 21.6 6.82005 22.5 7.92005 22.5C9.02005 22.5 9.92005 21.6 9.92005 20.5C9.92005 19.4 9.02005 18.5 7.92005 18.5Z" fill="#ffbf00"></path> <path d="M17.9201 18.5C16.8201 18.5 15.9301 19.4 15.9301 20.5C15.9301 21.6 16.8201 22.5 17.9201 22.5C19.0201 22.5 19.9201 21.6 19.9201 20.5C19.9201 19.4 19.0201 18.5 17.9201 18.5Z" fill="#ffbf00"></path> <path d="M12.5 10.87H13.5V9.37H15V8.37H13.5V6.87H12.5V8.37H11V9.37H12.5V10.87Z" fill="white"></path> </g></svg>
+        <div class="popup flex fixed z-30 w-full h-full overflow-hidden">
+            <div class="popup-wrap mx-auto my-auto">
+                <div class="popup-category popup-info w-full h-full hidden">
+                    <div class="popup-icon flex">
+                        <div class="icon flex rounded-full">
+                              <svg class="mx-auto my-auto" width="80%" height="80%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.8284 7 13.5 6.32843 13.5 5.5C13.5 4.67157 12.8284 4 12 4C11.1716 4 10.5 4.67157 10.5 5.5C10.5 6.32843 11.1716 7 12 7ZM11 9C10.4477 9 10 9.44772 10 10C10 10.5523 10.4477 11 11 11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V10C13 9.44772 12.5523 9 12 9H11Z" fill="#000000"></path> </g></svg>
                         </div>
-                        <span class="absolute">99+</span>
-                    </button>
+                    </div>
+                    <div class="popup-text flex">
+                        <div class="text flex overflow-y-auto">
+                            <span class="popup-span"></span>
+                        </div>
+                    </div>
+                    <div class="popup-btn flex">
+                        <button type="button" class="popup-ok-btn">
+                            <span>OK</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="login-wrap flex h-full">
-                    <button type="button" id="login-btn" class="login-btn button-default h-1/5 my-auto">
-                        <svg viewBox="0 0 24 24" fill="none" hidden xmlns="http://www.w3.org/2000/svg" stroke="#"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM15 9C15 10.6569 13.6569 12 12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9ZM12 20.5C13.784 20.5 15.4397 19.9504 16.8069 19.0112C17.4108 18.5964 17.6688 17.8062 17.3178 17.1632C16.59 15.8303 15.0902 15 11.9999 15C8.90969 15 7.40997 15.8302 6.68214 17.1632C6.33105 17.8062 6.5891 18.5963 7.19296 19.0111C8.56018 19.9503 10.2159 20.5 12 20.5Z" fill="#d71515"></path> </g></svg>
-                        <span class="block">Login</span>
-                    </button>
+                <div class="popup-category popup-cross w-full h-full hidden">
+                    <div class="popup-icon flex">
+                        <div class="icon flex rounded-full">
+                            <svg class="mx-auto my-auto" width="80%" height="80%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#ff0000"></path> </g></svg>
+                        </div>
+                    </div>
+                    <div class="popup-text flex">
+                        <div class="text flex">
+                            <span class="popup-span"></span>
+                        </div>
+                    </div>
+                    <div class="popup-btn flex">
+                        <button type="button" class="popup-ok-btn">
+                            <span>OK</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="popup-category popup-success w-full h-full hidden">
+                    <div class="popup-icon flex">
+                        <div class="icon flex rounded-full">
+                            <svg class="mx-auto my-auto" width="80%" height="80%" fill="#008000" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#008000" stroke-width="0.072"></g><g id="SVGRepo_iconCarrier"><path class="clr-i-outline clr-i-outline-path-1" d="M13.72,27.69,3.29,17.27a1,1,0,0,1,1.41-1.41l9,9L31.29,7.29a1,1,0,0,1,1.41,1.41Z" stroke="#008000" stroke-width="2"></path><rect x="0" y="0" width="36" height="36" fill-opacity="0"></rect></g></svg>
+                        </div>
+                    </div>
+                    <div class="popup-text flex">
+                        <div class="text flex">
+                            <span class="popup-span"></span>
+                        </div>
+                    </div>
+                    <div class="popup-btn flex">
+                        <button type="button" class="popup-ok-btn">
+                            <span>OK</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="popup-category popup-warning w-full h-full hidden">
+                    <div class="popup-icon flex">
+                        <div class="icon flex rounded-full">
+                            <svg class="mx-auto my-auto" width="80%" height="80%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 15H12.01M12 12V9M4.98207 19H19.0179C20.5615 19 21.5233 17.3256 20.7455 15.9923L13.7276 3.96153C12.9558 2.63852 11.0442 2.63852 10.2724 3.96153L3.25452 15.9923C2.47675 17.3256 3.43849 19 4.98207 19Z" stroke="#ffa500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </div>
+                    </div>
+                    <div class="popup-text flex">
+                        <div class="text flex">
+                            <span class="popup-span"></span>
+                        </div>
+                    </div>
+                    <div class="popup-btn flex">
+                        <button type="button" class="popup-ok-btn">
+                            <span>OK</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <button id="hamburger-btn" class="hamburger-btn flex absolute" type="button" hidden style="display: none;">
-                <svg class="mx-auto" width="80%" height="80%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Menu</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Menu"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <line x1="5" y1="7" x2="19" y2="7" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="17" x2="19" y2="17" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="12" x2="19" y2="12" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> </g> </g> </g></svg>
-            </button>
-        </header>
+        </div>
         <div class="login flex fixed z-30 w-screen h-screen overflow-hidden">
             <button id="close-btn" class="close-btn absolute z-10" type="button">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=doutone"> <g id="close"> <path id="vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M6.21991 6.21479C6.51281 5.92189 6.98768 5.92189 7.28057 6.21479L17.7854 16.7196C18.0783 17.0125 18.0783 17.4874 17.7854 17.7803C17.4925 18.0732 17.0177 18.0732 16.7248 17.7803L6.21991 7.27545C5.92702 6.98255 5.92702 6.50768 6.21991 6.21479Z" fill="#ffbf00"></path> <path id="vector (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M17.7853 6.21479C18.0782 6.50769 18.0782 6.98256 17.7853 7.27545L7.28038 17.7802C6.98749 18.0731 6.51261 18.0731 6.21972 17.7802C5.92683 17.4873 5.92683 17.0124 6.21973 16.7195L16.7247 6.21478C17.0176 5.92189 17.4924 5.9219 17.7853 6.21479Z" fill="#d71515"></path> </g> </g> </g></svg>
@@ -195,6 +243,30 @@
                 </div>
             </div>
         </div>
+        <header class="absolute top-0 z-20 flex justify-between items-center w-full">
+            <div class="logo-wrap flex h-full">
+                <a href="#" class="my-auto">CinemaTiket.</a>
+            </div>
+            <div class="header-button flex">
+                <div class="cart-wrap">
+                    <button type="button" id="cart-btn" class="button-default relative h-1/5 my-auto">
+                        <div class="icon-wrap">
+                            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.7351 14.0181C8.91085 13.6985 9.24662 13.5 9.61132 13.5H16.47C17.22 13.5 17.88 13.09 18.22 12.47L21.6008 6.33041C21.7106 6.13097 21.7448 5.91025 21.7129 5.70131C21.8904 5.52082 22 5.27321 22 5C22 4.44772 21.5523 4 21 4H6C5.96703 4 5.93443 4.0016 5.90228 4.00471L5.7317 3.64435C5.40095 2.94557 4.69708 2.5 3.92398 2.5H2.92004C2.36776 2.5 1.92004 2.94772 1.92004 3.5C1.92004 4.05228 2.36776 4.5 2.92004 4.5H3.14518C3.6184 4.5 4.04931 4.77254 4.25211 5.20011L7.08022 11.1627C7.35632 11.7448 7.33509 12.4243 7.02318 12.988L6.17004 14.53C5.44004 15.87 6.40004 17.5 7.92004 17.5H18.92C19.4723 17.5 19.92 17.0523 19.92 16.5C19.92 15.9477 19.4723 15.5 18.92 15.5H9.61131C8.85071 15.5 8.36855 14.6845 8.7351 14.0181Z" fill="#ffbf00"></path> <path d="M7.92005 18.5C6.82005 18.5 5.93005 19.4 5.93005 20.5C5.93005 21.6 6.82005 22.5 7.92005 22.5C9.02005 22.5 9.92005 21.6 9.92005 20.5C9.92005 19.4 9.02005 18.5 7.92005 18.5Z" fill="#ffbf00"></path> <path d="M17.9201 18.5C16.8201 18.5 15.9301 19.4 15.9301 20.5C15.9301 21.6 16.8201 22.5 17.9201 22.5C19.0201 22.5 19.9201 21.6 19.9201 20.5C19.9201 19.4 19.0201 18.5 17.9201 18.5Z" fill="#ffbf00"></path> <path d="M12.5 10.87H13.5V9.37H15V8.37H13.5V6.87H12.5V8.37H11V9.37H12.5V10.87Z" fill="white"></path> </g></svg>
+                        </div>
+                        <span class="absolute">99+</span>
+                    </button>
+                </div>
+                <div class="login-wrap flex h-full">
+                    <button type="button" id="login-btn" class="login-btn button-default h-1/5 my-auto">
+                        <svg viewBox="0 0 24 24" fill="none" hidden xmlns="http://www.w3.org/2000/svg" stroke="#"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM15 9C15 10.6569 13.6569 12 12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9ZM12 20.5C13.784 20.5 15.4397 19.9504 16.8069 19.0112C17.4108 18.5964 17.6688 17.8062 17.3178 17.1632C16.59 15.8303 15.0902 15 11.9999 15C8.90969 15 7.40997 15.8302 6.68214 17.1632C6.33105 17.8062 6.5891 18.5963 7.19296 19.0111C8.56018 19.9503 10.2159 20.5 12 20.5Z" fill="#d71515"></path> </g></svg>
+                        <span class="block">Login</span>
+                    </button>
+                </div>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn flex absolute" type="button" hidden style="display: none;">
+                <svg class="mx-auto" width="80%" height="80%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Menu</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Menu"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <line x1="5" y1="7" x2="19" y2="7" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="17" x2="19" y2="17" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="12" x2="19" y2="12" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> </g> </g> </g></svg>
+            </button>
+        </header>
         <main class="w-full">
             <div class="main-hero relative flex h-screen w-full">
                 <div class="hero-text flex flex-col justify-center absolute z-10 w-1/4 h-full">
@@ -203,7 +275,7 @@
                         <h3>Silahkan Pesan Tiket Untuk Menonton Sekarang !</h3>
                     </div>
                     <div class="hero-button">
-                        <button class="button-default pesan" type="button">Pesan</button>
+                        <button id="pesan-btn" class="button-default pesan" type="button">Pesan</button>
                         <button class="button-default daftar-film" type="button">Daftar Film</button>
                     </div>
                 </div>
@@ -262,6 +334,58 @@
                         </ul>
                     </div>
                     <div class="daftar-film-show flex w-full">
+                        <div class="genres-wrap flex w-full absolute">
+                            <div class="genres-center flex w-full my-auto">
+                                <h1 class="genres-title flex justify-center items-center">
+                                    <svg width="1.5vw" height="1.5vw" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Filter</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Filter"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <line x1="4" y1="5" x2="16" y2="5" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> <line x1="4" y1="12" x2="10" y2="12" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> <line x1="14" y1="12" x2="20" y2="12" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> <line x1="8" y1="19" x2="20" y2="19" id="Path" stroke="#ffbf00" stroke-width="2" stroke-linecap="round"> </line> <circle id="Oval" stroke="#ffbf00" stroke-width="2" stroke-linecap="round" cx="18" cy="5" r="2"> </circle> <circle id="Oval" stroke="#ffbf00" stroke-width="2" stroke-linecap="round" cx="12" cy="12" r="2"> </circle> <circle id="Oval" stroke="#ffbf00" stroke-width="2" stroke-linecap="round" cx="6" cy="19" r="2"> </circle> </g> </g> </g></svg>
+                                    <span>Genres</span>
+                                </h1>
+                                <div class="genres-various flex relative overflow-x-auto">
+                                    <ul class="inline-flex my-auto">
+                                        <li class="genres-list flex overflow-hidden">
+                                            <button type="button" class="flex w-full h-full rounded-full">
+                                                <span>Komedi</span>
+                                            </button>
+                                        </li>
+                                        <li class="genres-list flex overflow-hidden">
+                                            <button type="button" class="flex w-full h-full rounded-full">
+                                                <span>Aksi</span>
+                                            </button>
+                                        </li>
+                                        <li class="genres-list flex overflow-hidden">
+                                            <button type="button" class="flex w-full h-full rounded-full">
+                                                <span>Romantis</span>
+                                            </button>
+                                        </li>
+                                        <li class="genres-list flex overflow-hidden">
+                                            <button type="button" class="flex w-full h-full rounded-full">
+                                                <span>Keluarga</span>
+                                            </button>
+                                        </li>
+                                        <li class="genres-list flex overflow-hidden">
+                                            <button type="button" class="flex w-full h-full rounded-full">
+                                                <span>Kartun</span>
+                                            </button>
+                                        </li>
+                                        <li class="genres-list flex overflow-hidden">
+                                            <button type="button" class="flex w-full h-full rounded-full">
+                                                <span>Horor</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="genres-filter flex">
+                                    <div class="filter-wrap flex relative rounded-full inline-block my-auto mx-auto">
+                                        <span class="text-filter">Populer</span>
+                                        <select name="genres-filter" class="rounded-full" id="genres-select">
+                                            <option value="" class="genres-option" data-genres="populer">Populer</option>
+                                            <option value="" class="genres-option" data-genres="sedang-tayang">Sedang Tayang</option>
+                                            <option value="" class="genres-option" data-genres="segera-tayang">Segera Tayang</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="display-film relative flex w-full">
                             <button id="poster-prev-btn" class="shift-prev-btn shift-btn absolute z-10 rounded-full" type="button">
                                 <svg fill="#ffbf00" class="my-auto mx-auto" width="65%" height="65%" viewBox="0 0 1200 1000" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M656 852L294 535q-16-14-16-35t16-35l362-317q13-10 28-9t26 11.5 11 27.5v644q0 17-11 27.5T684 861t-28-9z"></path></g></svg>

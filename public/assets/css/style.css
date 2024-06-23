@@ -223,6 +223,60 @@
     font-size: 3vmax;
 }
 
+/* POP UP [START] */
+
+.mobile-view .container-default .popup .popup-wrap {
+    width: 85vw;
+    height: 70vw;
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-category {
+    border-radius: 7vw;
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-category .popup-icon .icon {
+    width: 35vw;
+    height: 35vw;
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-info .popup-icon .icon {
+    border: 2vw solid var(--bg-black);
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-cross .popup-icon .icon {
+    border: 2vw solid red;
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-success .popup-icon .icon {
+    border: 2vw solid green;
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-warning .popup-icon .icon {
+    border: 2vw solid orange;
+}
+ 
+.mobile-view .container-default .popup .popup-wrap .popup-category .popup-text .text {
+    width: 70vw;
+    height: 10vw;
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-category .popup-text .text span {
+    font-size: 2.7vw;
+    line-height: 2.7vw;
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-category .popup-btn button {
+    width: 50vw;
+    height: 10vw;
+}
+
+.mobile-view .container-default .popup .popup-wrap .popup-category .popup-btn button span {
+    font-size: 3vw;
+    line-height: 3vw;
+}
+
+/* POP UP [END] */
+
 /* FORM LOGIN / RESTRASI [START] */
 
 .mobile-view .container-default .login {
@@ -528,7 +582,7 @@
 }
 
 .mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu {
-    height: 10vw;
+    height: 12vw;
 }
 
 .mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu a:after {
@@ -540,8 +594,8 @@
 }
 
 .mobile-view .main-daftar-film .daftar-film-content .daftar-film-menu .menu .list-menu a .icon-menu {
-    width: 5vw;
-    height: 5vw;
+    width: 7vw;
+    height: 7vw;
     box-shadow: 0 0 2vw 0.5vw var(--primary-color);
 }
 
@@ -847,6 +901,97 @@ header .cart-wrap button span {
 header .login-wrap button:hover {
     background-color: rgba(var(--primary-color-rgb), 0.5);
 }
+
+/* Pop Up [START] */
+
+.container-default .popup {
+    height: 0;
+    background-color: rgba(var(--bg-black-rgb), 0.5);
+}
+
+.container-default .popup .popup-wrap {
+    width: 45vw;
+    height: 30vw;
+    overflow: hidden;
+}
+
+.container-default .popup .popup-wrap .popup-category {
+    border-radius: 3vw;
+    background-color: var(--bg-white);
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-icon {
+    width: 100%;
+    height: 60%;
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-icon .icon {
+    width: 16vw;
+    height: 16vw;
+    margin: auto auto 0;
+    background-color: var(--bg-white);
+    overflow: hidden;
+}
+
+.container-default .popup .popup-wrap .popup-info .popup-icon .icon {
+    border: 1vw solid var(--bg-black);
+}
+
+.container-default .popup .popup-wrap .popup-cross .popup-icon .icon {
+    border: 1vw solid red;
+}
+
+.container-default .popup .popup-wrap .popup-success .popup-icon .icon {
+    border: 1vw solid green;
+}
+
+.container-default .popup .popup-wrap .popup-warning .popup-icon .icon {
+    border: 1vw solid orange;
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-text {
+    width: 100%;
+    height: 20%;
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-text .text {
+    width: 35vw;
+    height: 5vw;
+    margin: auto;
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-text .text span {
+    margin: auto;
+    font-size: 1.35vw;
+    line-height: 1.35vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-btn {
+    width: 100%;
+    height: 20%;
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-btn button {
+    width: 20vw;
+    height: 4vw;
+    margin: 0 auto auto;
+    border-radius: 1vw;
+    background-color: var(--primary-color);
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-btn button:hover {
+    opacity: 0.5;
+}
+
+.container-default .popup .popup-wrap .popup-category .popup-btn button span {
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+    font-weight: 600;
+}
+
+/* Pop Up [END] */
 
 /* Form Login [START] */
 
@@ -1567,9 +1712,17 @@ main .main-daftar-film .daftar-film-show .display-film .display-scroll .film-wra
     margin: auto 0 0;
 }
 
+
 .kategori main .main-daftar-film .daftar-film-show .genres-wrap {
+    display: flex;
     height: 15%;
     padding: 0 3vw;
+}
+
+main .main-daftar-film .daftar-film-show .genres-wrap,
+.sedang-tayang main .main-daftar-film .daftar-film-show .genres-wrap,
+.segera-tayang main .main-daftar-film .daftar-film-show .genres-wrap {
+    display: none;
 }
 
 .kategori main .main-daftar-film .daftar-film-show .genres-wrap .genres-center {

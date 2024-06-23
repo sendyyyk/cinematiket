@@ -707,8 +707,3 @@ video {
 .rounded-full {
   border-radius: 9999px;
 }
-
-.bg-pink-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
-}
