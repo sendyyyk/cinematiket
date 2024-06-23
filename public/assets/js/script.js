@@ -1,17 +1,16 @@
     document.addEventListener("DOMContentLoaded", function () {
         // Ip Public User 
-
+        
         fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
             document.getElementById("ip-set").textContent = ` ${data.ip}`;
         })
         .catch(error => {
-            error;
-            document.getElementById("ip-set").textContent = `anda sedang offline | ${error}`;
+            document.getElementById("ip-set").textContent = `Anda sedang offline | ${error}`;
         });
         
-        //  Media Device Change
+        //  Media Device Change [START]
         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
         if (/android/i.test(userAgent) || /ipad|iPhone|iPad/.test(userAgent) && !window.MSStream) {
             document.body.classList.add("mobile-view");
@@ -20,13 +19,17 @@
         } else {
             document.body.classList.remove("mobile-view");
         }
+        //  Media Device Change [END]
         
-        // Hamburger Menu Button
+        // Hamburger Menu Button [START]
         document.getElementById("hamburger-btn").addEventListener("click", function() {
             document.querySelector("header").classList.toggle("see-all-header")
             document.querySelector(".header-button").classList.toggle("see-all-margin")
         })
+        // Hamburger Menu Button [END]
         
+        // Form Login/Registrasi/Lupa Password [START]
+
         document.getElementById("login-btn").addEventListener("click", function() {
             document.querySelector(".login").classList.add("see-all-header")
             document.querySelector(".form-wrap").classList.add("see-all-transform")
@@ -63,7 +66,6 @@
                         formWrap.classList.remove("lupa-pswd-wrap");
                     }, 200)
                 } else if (dataCheck === "registrasi") {
-                    console.log("regis");
                     formWrap.classList.remove("see-all-transform");
                     setTimeout(() => {
                         formWrap.classList.add("see-all-transform");
@@ -76,7 +78,6 @@
                         formWrap.classList.remove("lupa-pswd-wrap");
                     }, 100)
                 } else if (dataCheck === "lupa-pswd") {
-                    console.log("lupa");
                     formWrap.classList.remove("see-all-transform");
                     setTimeout(() => {
                         formWrap.classList.add("see-all-transform");
@@ -89,6 +90,23 @@
                 } 
             });
         });
+        // Form Login/Registrasi/Lupa Password [END]
+
+        // Hide / Show Password Button [START]
+
+        const buttonPassword = document.querySelectorAll(".hide-pswd");
+        
+        buttonPassword.forEach(element => {
+            element.addEventListener("click", function () {
+                const input = this.closest('.flex').querySelector('input.password');
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                element.classList.toggle("see-all-margin-100")
+                input.setAttribute('type', type);   
+                
+            })
+        })
+
+        // Hide / Show Password Button [END]
 
         // Jumlah Film [Daftar Film]
 
@@ -183,4 +201,23 @@
             });
         });
         
+        
+        // Tombol Filter Kategori [START]
+
+        console.log("berhasil");
+        const genresSelect = document.getElementById("genres-select")
+        genresSelect.addEventListener("change", function () {
+            const selectedOption = genresSelect.options[genresSelect.selectedIndex];
+            const selectedGenre = selectedOption.getAttribute('data-genres');
+            if (selectedGenre === "sedang-tayang") {
+                document.querySelector(".text-filter").textContent = "Sedang Tayang";
+                console.log("jinx kontol");
+            } else if (selectedGenre === "segera-tayang") {
+                document.querySelector(".text-filter").textContent = "Segera Tayang";
+            } else {
+                document.querySelector(".text-filter").textContent = "Populer";
+            }
+        });
+
+        // Tombol Filter Kategori [END]
     })
